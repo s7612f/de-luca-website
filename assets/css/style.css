@@ -394,7 +394,7 @@ p + p { margin-top: 0.9rem; }
   height: 100vh;
   min-width: 100%;
   min-height: 56.25vw;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.1);
   border: 0;
 }
 .video-bg-overlay {
