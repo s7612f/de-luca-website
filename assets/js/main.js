@@ -1,6 +1,6 @@
 const slides = [
   'assets/img/1.jpg',
-  'assets/img/Restaurant-3-2019-1.jpg',
+  'assets/img/Restaurant-3-2019.jpg',
   'assets/img/5.jpg',
   'assets/img/Restaurant-5-2019.jpg',
   'assets/img/7.jpg',
