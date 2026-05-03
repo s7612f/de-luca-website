@@ -16,7 +16,7 @@ const slides = [
 
 let current = 0;
 const el = document.getElementById('heroSlideshow');
-let slideshowTimer = null;
+let slideshowTimer;
 
 function preload(src) {
   return new Promise(r => { const i = new Image(); i.onload = r; i.onerror = r; i.src = src; });
@@ -34,16 +34,6 @@ if (el) {
   slideshowTimer = setInterval(cycle, 5000);
 }
 
-// Fade out the photo slideshow once Vimeo signals playback has started
-window.addEventListener('message', e => {
-  try {
-    const data = JSON.parse(e.data);
-    if (data.event === 'playProgress' || data.event === 'play') {
-      if (el) el.style.opacity = '0';
-      if (slideshowTimer) { clearInterval(slideshowTimer); slideshowTimer = null; }
-    }
-  } catch (_) {}
-});
 
 // Nav scroll state
 const nav = document.getElementById('mainNav');
